@@ -28,3 +28,11 @@ function randomStringWithIfColumn(worksheetName, stringColumnTitle, ifColumnTitl
   })
   ws.getRange(3, stringColumnIndex, newStringArr.length, 1).setValues(newStringArr)
 }
+
+function getColumnIndex(title, columnTitles) {
+  for (i = 0; i <= columnTitles[0].length - 1; i++) {
+    if (columnTitles[0][i] == title) {
+      return i + 1
+    }
+  }
+}
